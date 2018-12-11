@@ -7,94 +7,50 @@
     <title>Survey Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+   
   </head>
 
   <body>
 
-    <head class="header">
-      <h1 class="title">Survey Form</h1>
-      <p class="description">Let us know how we can improve:</p>
-    </head>
+    <header>
+      <h1>Survey Form</h1>
+    </header>
 
-    <main id="surveyBody">
-      <form id="mainForm">
-        <div class="customerInfo">
-          <div class="leftCol">
-            <label for="customerName">Name: </label>
-          </div>
-          <div class="rightCol">
-            <input type="text" name="customerName" id="customerName" placeholder="First and Last Name">
-          </div>
+    <main class="survey-form">
+      <h3 id="introduction">Let us know how we can best improve:</h3>
+      <p id="attention">All fields marked with * are required!</p>
 
-          <div class="leftCol">
-            <label for="customerEmail">Email: </label>
-          </div>
-          <div class="rightCol">
-            <input type="email" name="customerEmail" id="customerEmail" placeholder="name@host.com">
-          </div>
-
-          <div class="leftCol">
-            <label for="customerAge">Age: </label>
-          </div>
-          <div class="rightCol">
-            <input type="text" name="customerAge" id="customerAge" min="1" max="115" placeholder="Age" class="input-field">
-          </div>
-
-          <div class="leftCol">
-            <label for="customerRole">What best describes your current role?</label>
-          </div>
-          <div class="rightCol">
-            <select name="customerRole" id="customerRole">
-              <option disabled selected value>Please choose one:</option>
-              <option value="student">Student</option>
-              <option value="fullTime">Full Time Job</option>
-              <option value="learner">Full Time Learner</option>
-              <option value="preferNo">Prefer not to say</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+      <!-- Gathering general user info here -->
+      <div class="survey">
+        <div class="label">
+          <label for="name"> * Name: </label>
         </div>
-
-        <div id="customerOpinion">
-          <div class="leftCol">
-            <label for="recommendation">How likely are you to recommend us to a friend?</label>
-          </div>
-          <div class="rightCol">
-            <ul id="recommendation">
-              <li class="radio">
-                <label for="definitely">Definitely likely</label>
-                <input type="radio" name="radioRecommend" id="definitely" value="1">
-              </li>
-              <li class="radio">
-                <label for="maybe">Sort Of Likely</label>
-                <input type="radio" name="radioRecommend" id="maybe" value="2">
-              </li>
-              <li class="radio">
-                <label for="unsure">I don't know how likely</label>
-                <input type="radio" name="radioRecommend" id="unsure" value="3">
-              </li>
-              <li class="radio">
-                <label for="unlikely">Never ever going to do it!</label>
-                <input type="radio" name="radioRecommend" id="unlikely" value="4">
-              </li>
-            </ul>
-          </div>
-
-          <div class="leftCol">
-            <label for="user"></label>
-          </div>
+        <div class="input">
+          <input type="text" name="name" id="name">
         </div>
+        <div class="label">
+          <label for="email"> * E-Mail: </label>
+        </div>
+        <div class="input">
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="label">
+          <label for="age"> * Age: </label>
+        </div>
+        <div class="input">
+          <input type="number" name="age" id="age">
+        </div>
+      <!-- Gathering student opinion to tie with info -->
+        <div class="label">
+          <label for="currentRole"> Which option best describes your current role?</label>
+        </div>
+        <div class="input">
+          <select name="currentRole" id="currentRole">
+            <option disabled value>Select an option</option>
 
-
-      </form>
-
-
-
-      <div id="submission">
-        <input type="submit" value="submit">
-      </div>
+          </select>
+        </div>
+    </div>
     </main>
-  </body>
-
+  <script src="main.js"></script>
 </html>
