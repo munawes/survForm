@@ -10,6 +10,14 @@ input {
   border-radius: 5px;
 }
 
+li {
+  list-style: none;
+}
+
+#attention {
+  color: red;
+}
+
 .label {
   display: inline-block;
   text-align: right;

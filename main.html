@@ -13,11 +13,11 @@
   <body>
 
     <header>
-      <h1>Survey Form</h1>
+      <h1 id="title">Survey Form</h1>
     </header>
 
     <main class="survey-form">
-      <h3 id="introduction">Let us know how we can best improve:</h3>
+      <p id="description">Let us know how we can best improve:</p>
       <p id="attention">All fields marked with * are required!</p>
 
       <!-- Gathering general user info here -->
@@ -26,31 +26,51 @@
           <label for="name"> * Name: </label>
         </div>
         <div class="input">
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="name" required>
         </div>
         <div class="label">
           <label for="email"> * E-Mail: </label>
         </div>
         <div class="input">
-          <input type="email" name="email" id="email">
+          <input type="email" name="email" id="email" required>
         </div>
         <div class="label">
           <label for="age"> * Age: </label>
         </div>
         <div class="input">
-          <input type="number" name="age" id="age">
+          <input type="number" name="age" id="age" required>
         </div>
+
       <!-- Gathering student opinion to tie with info -->
         <div class="label">
           <label for="currentRole"> Which option best describes your current role?</label>
         </div>
         <div class="input">
           <select name="currentRole" id="currentRole">
-            <option disabled value>Select an option</option>
-
+            <option disabled selected value>Select an option</option>
+            <option value="student">Student</option>
+            <option value="fullTime">Full Time</option>
+            <option value="partTime">Part Time</option>
+            <option value="learning">Educating</option>
+            <option value="prefNo">Prefer not to say</option>
+            <option value="other">Other</option>
           </select>
         </div>
-    </div>
+        <div class="label">
+          <label for="recommend">How likely are you to recommend us to a friend or colleague?</label>
+        </div>
+        <div class="input">
+          <ul>
+            <li class="radio"><label>Definitely<input type="radio" name="definitely" value="1" checked></label></li>
+            <li class="radio"><label>Maybe<input type="radio" name="maybe" value="2"></label></li>
+            <li class="radio"><label>Not Sure<input type="radio" name="unsure" value="3"></label></li>
+          </ul>
+        </div>
+        <div class="label">
+          <label for="most-like">What did you like most about the program?</label>
+        </div>
+
+      </div>
     </main>
   <script src="main.js"></script>
 </html>
